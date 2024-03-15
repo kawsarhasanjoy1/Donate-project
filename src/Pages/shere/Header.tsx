@@ -40,24 +40,24 @@ const Header = () => {
           </NavLink>
         </div>
 
-        <div className=" w-full  md:z-0 z-20">
+        <div className=" w-full  md:z-0 z-20 flex justify-end">
           <div className=" absolute right-2 top-2">
             <span onClick={HandleHeader} className="md:hidden">
               {isOpen ? <AiOutlineClose size={25} /> : <FaBars size={25} />}
             </span>
           </div>
           <div
-            className={` md:flex  items-center justify-end  h-14  gap-10 py-2 absolute md:static md:space-y-0 space-y-4 ${
+            className={` md:flex  items-center justify-end  h-14  gap-10 py-2 absolute  md:space-y-0 space-y-4 ${
               isOpen
-                ? "bg-[#000000] mt-10 rounded-md z-10 right-0 top-6 w-full h-[250px] px-5 "
-                : "-top-60 "
+                ? "bg-[#000000] mt-10 rounded-md z-10 right-0 top-6 w-full h-screen px-5 transition-all delay-1000 duration-500"
+                : "-top-[450px] md:top-0  "
             }`}
           >
             <li className="group flex  cursor-pointer flex-col">
               <NavLink to={"/"}>Home</NavLink>
               <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
             </li>
-            <li className="group flex  cursor-pointer flex-col">
+            <li className="group flex  cursor-pointer flex-col text-white">
               <NavLink to={"/"}>Brand Logo</NavLink>
               <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
             </li>
@@ -89,7 +89,7 @@ const Header = () => {
                 <p>
                   <Button
                     children="LogOut"
-                    className=" text-white bg-transparent"
+                    className=" h-7  flex justify-center items-center"
                     HandleToButton={HandleToLogOut}
                   />
                 </p>
