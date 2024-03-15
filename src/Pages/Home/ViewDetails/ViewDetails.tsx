@@ -5,6 +5,7 @@ import Model from "../../../component/Model/Model";
 
 const ViewDetails = () => {
   const data = useLoaderData() as any;
+  console.log(data)
   const [openModal, setOpenModal] = useState(false);
 
   const details = data?.data;

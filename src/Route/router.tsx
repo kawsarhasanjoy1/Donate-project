@@ -44,7 +44,7 @@ export const router = createBrowserRouter([
         path: `/cloth-details/:id`,
         element: <ViewDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/api/v1/cloth/${params.id}`),
+          fetch(`https://donate-backend.vercel.app/api/v1/cloth/${params.id}`),
       },
     ],
   },
